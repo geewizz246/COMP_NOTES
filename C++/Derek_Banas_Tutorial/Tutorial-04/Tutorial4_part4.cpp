@@ -38,6 +38,6 @@ int main() {
 
     // ----- END OF DO WHILE LOOPS -----
 
-    system("Pause");
+    
     return 0;
 }

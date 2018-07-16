@@ -17,7 +17,7 @@ int main() {
     for (int i = 0; i < 4; ++i)
         printf("arr[%d] : %d\n", i, arr[i]);
 
-    system("Pause");
+    
     return 0;
 }
 

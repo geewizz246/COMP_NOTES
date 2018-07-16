@@ -42,6 +42,6 @@ int main() {
         i += 1;
     }
 
-    system("Pause");
+    
     return 0;
 }

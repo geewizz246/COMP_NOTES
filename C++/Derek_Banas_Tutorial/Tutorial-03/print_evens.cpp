@@ -19,6 +19,6 @@ int main()
     }
     std::cout << "\n\n";
 
-    system("Pause");
+    
     return 0;
 }

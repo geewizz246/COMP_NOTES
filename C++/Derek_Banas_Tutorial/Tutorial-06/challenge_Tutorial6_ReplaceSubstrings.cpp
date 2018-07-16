@@ -25,7 +25,7 @@ int main() {
 
     std::cout << "New string : " << phrase << "\n";
 
-    system("Pause");
+    
     return 0;
 }
 

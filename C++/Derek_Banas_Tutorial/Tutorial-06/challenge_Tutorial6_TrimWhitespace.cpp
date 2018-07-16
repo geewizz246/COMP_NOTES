@@ -11,7 +11,7 @@ int main() {
 
     std::cout << "*" << aStr << "*\n";
 	
-	system("Pause");
+	
 	return 0;
 }
 

@@ -48,6 +48,6 @@ int main()
     for (int i = 0; i < vecsWords.size(); i++)
         std::cout << vecsWords[i] << "\n";
 
-    system("Pause");
+    
     return 0;
 }

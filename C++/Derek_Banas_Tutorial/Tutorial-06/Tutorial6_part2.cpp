@@ -18,7 +18,7 @@ int main() {
     std::string sCusts = VectorToString(vCusts, ' ');
     std::cout << sCusts << "\n";
 
-    system("Pause");
+    
     return 0;
 }
 

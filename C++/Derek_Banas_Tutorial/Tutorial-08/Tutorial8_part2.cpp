@@ -44,7 +44,7 @@ int main() {
 		default: std::cout << "Please enter \'c\' or \'r\'\n";
 	}
 
-	system("Pause");
+	
 	return 0;
 }
 

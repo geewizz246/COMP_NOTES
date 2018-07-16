@@ -30,6 +30,6 @@ int main() {
 
     // ----- END PROBLEM CREATE A DO WHILE LOOP WITH WHILE -----
 
-    system("Pause");
+    
     return 0;
 }

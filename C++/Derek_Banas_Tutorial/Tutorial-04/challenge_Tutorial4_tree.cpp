@@ -86,7 +86,7 @@ int main() {
 
     // ----- END PROBLEM DRAW A PINE TREE -----
    
-    system("Pause");
+    
     return 0;
 }
 

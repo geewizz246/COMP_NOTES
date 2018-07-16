@@ -30,6 +30,6 @@ int main()
     for (auto y : myVec)
         std::cout << y << "\n";
 
-    system("Pause");
+    
     return 0;
 }

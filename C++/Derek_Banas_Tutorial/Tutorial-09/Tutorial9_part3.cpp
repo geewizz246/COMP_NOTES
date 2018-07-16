@@ -30,7 +30,7 @@ int main() {
 
 	// ----- END PERFORMING OPERATIONS USING MULTIPLE VECTORS -----
 
-	system("Pause");
+	
 	return 0;
 }
 

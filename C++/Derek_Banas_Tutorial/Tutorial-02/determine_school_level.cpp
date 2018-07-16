@@ -31,6 +31,6 @@ int main()
     else
         std::cout << "You belong in University.\n\n";
 
-    system("Pause");
+    
     return 0;
 }

@@ -18,7 +18,7 @@ int main() {
     for (int i = 0; i < matches.size(); i++)
         std::cout << matches[i] << "\n";
 
-    system("Pause");
+    
     return 0;
 }
 

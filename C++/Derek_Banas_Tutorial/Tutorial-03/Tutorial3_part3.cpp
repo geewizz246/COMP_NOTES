@@ -22,7 +22,7 @@ int main() {
     age = AssignAge2(age);
     std::cout << "Returned Age = " << age << "\n";
 
-    system("Pause");
+    
     return 0;
 }
 

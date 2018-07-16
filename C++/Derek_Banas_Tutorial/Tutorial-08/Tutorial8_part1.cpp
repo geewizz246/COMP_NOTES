@@ -25,7 +25,7 @@ int main() {
 
     std::cout << "Factorial : " << Factorial(num) << "\n";
     
-    system("Pause");
+    
     return 0;
 }
 

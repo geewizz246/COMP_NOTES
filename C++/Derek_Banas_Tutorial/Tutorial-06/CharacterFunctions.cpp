@@ -18,6 +18,6 @@ int main() {
     std::cout << "Is space a space? "
         << isspace(aSpace) << "\n";
 
-    system("Pause");
+    
     return 0;
 }

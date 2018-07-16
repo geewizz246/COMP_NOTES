@@ -52,6 +52,6 @@ int main() {
     // letters by subtracting and adding 1 value
     // ----- END OF BONUS PROBLEM -----
 
-    system("Pause");
+    
     return 0;
 }

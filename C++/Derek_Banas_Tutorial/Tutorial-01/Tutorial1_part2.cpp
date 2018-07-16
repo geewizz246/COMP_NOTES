@@ -68,6 +68,6 @@ int main()
     std::cout << "Min long double " << std::numeric_limits<long double>::min() << "\n";
     std::cout << "Min long double " << std::numeric_limits<long double>::max() << "\n\n";
 
-    system("Pause");
+    
     return 0;
 }

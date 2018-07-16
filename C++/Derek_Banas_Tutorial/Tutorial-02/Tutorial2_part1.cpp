@@ -32,6 +32,6 @@ int main()
     else
         std::cout << "Not an Important Birthday\n";
 
-    system("Pause");
+    
     return 0;
 }

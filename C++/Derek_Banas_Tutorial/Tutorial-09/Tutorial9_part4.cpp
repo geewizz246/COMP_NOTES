@@ -11,7 +11,7 @@ int main() {
 	std::cout.setf(std::ios::boolalpha);
 	std::cout << "Can I vote : " << canIVote << "\n";
 
-	system("Pause");
+	
 	return 0;
 }
 

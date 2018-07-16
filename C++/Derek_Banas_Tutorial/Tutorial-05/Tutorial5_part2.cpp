@@ -63,6 +63,6 @@ int main() {
     // Also sin, cos, tan, asin, acos, atan, atan2,
     // sinh, cosh, tanh, asinh, acosh, atanh
 
-    system("Pause");
+    
     return 0;
 }

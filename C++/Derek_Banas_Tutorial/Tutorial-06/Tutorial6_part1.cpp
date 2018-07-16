@@ -20,7 +20,7 @@ int main() {
     {
         std::cout << str << "\n";
     }
-    system("Pause");
+    
     return 0;
 }
 

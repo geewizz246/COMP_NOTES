@@ -113,6 +113,6 @@ int main()
     std::string strNum = std::to_string(1 + 2);
     std::cout << "String : " << strNum << "\n";
 
-    system("Pause");
+    
     return 0;
 }

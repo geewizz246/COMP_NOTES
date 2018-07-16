@@ -17,7 +17,7 @@ int main() {
 
     std::cout << "Pointer Age : " << age << "\n";
 
-    system("Pause");
+    
     return 0;
 }
 

@@ -44,7 +44,7 @@ int main() {
     
     // ----- END PROBLEM CALCULATE COMPOUNDING INTEREST -----
 
-    system("Pause");
+    
     return 0;
 }
 

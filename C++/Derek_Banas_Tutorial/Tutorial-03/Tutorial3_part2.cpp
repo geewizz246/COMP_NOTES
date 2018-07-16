@@ -30,7 +30,7 @@ int main() {
     // AddNumbers(num1, num2) returns the result of adding
     // num1 and num2
 
-    system("Pause");
+    
     return 0;
 }
 

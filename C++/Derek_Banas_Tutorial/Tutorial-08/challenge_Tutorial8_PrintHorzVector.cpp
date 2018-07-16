@@ -22,7 +22,7 @@ int main() {
     std::vector<int> aVec = { 10, 20, 30, 8, 5, 35, 28, 62, 9, 0 };
     PrintHorzVector(aVec);
 
-    system("Pause");
+    
     return 0;
 }
 

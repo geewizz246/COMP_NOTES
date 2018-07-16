@@ -37,7 +37,7 @@ int main() {
 
 	// ----- END MULTIPLY ALL VALUES -----
 
-	system("Pause");
+	
 	return 0;
 }
 

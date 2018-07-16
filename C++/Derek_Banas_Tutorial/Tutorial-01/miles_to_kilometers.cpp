@@ -23,6 +23,6 @@ int main()
 
     printf("%.1f miles equals %.4f kilometers.\n\n", dMiles, dKm);
 
-    system("Pause");
+    
     return 0;
 }

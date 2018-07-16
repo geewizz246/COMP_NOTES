@@ -17,7 +17,7 @@ int main() {
 
     printf("Fib(%d) : %d\n", index, fib(index));
 
-    system("Pause");
+    
     return 0;
 }
 

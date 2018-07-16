@@ -48,6 +48,6 @@ int main()
     else
         printf("Please only enter '+', '-', '*', or '/' as operations.\n\n");
 
-    system("Pause");
+    
     return 0;
 }

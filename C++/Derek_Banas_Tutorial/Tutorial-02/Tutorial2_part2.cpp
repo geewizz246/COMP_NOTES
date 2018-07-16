@@ -33,6 +33,6 @@ int main()
 
     std::cout << arrNums4[0][0][1] << "\n\n"; // Prints 2
 
-    system("Pause");
+    
     return 0;
 }

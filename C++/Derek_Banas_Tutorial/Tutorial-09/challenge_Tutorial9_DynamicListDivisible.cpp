@@ -30,7 +30,7 @@ int main() {
 	for (auto x : vecVals2)
 		std::cout << x << "\n";
 
-	system("Pause");
+	
 	return 0;
 }
 

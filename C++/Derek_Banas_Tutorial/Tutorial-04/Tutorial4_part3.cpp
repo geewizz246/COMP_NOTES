@@ -35,6 +35,6 @@ int main() {
 
     // ----- END OF EXCEPTION HANDLING EX 2 -----
 
-    system("Pause");
+    
     return 0;
 }

@@ -30,6 +30,6 @@ int main()
     printf("%d / %d = %d\n", nNum1, nNum2, (nNum1 / nNum2));
     printf("%d %% %d = %d\n", nNum1, nNum2, (nNum1 % nNum2)); // %% just prints one %
 
-    system("Pause");
+    
     return 0;
 }

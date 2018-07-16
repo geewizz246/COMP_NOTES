@@ -69,7 +69,6 @@ int main() {
 	// ----- END SUM A LIST -----
 
 
-	system("Pause");
 	return 0;
 }
 

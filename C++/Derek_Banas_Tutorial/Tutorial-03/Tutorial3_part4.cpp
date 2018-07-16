@@ -27,6 +27,6 @@ int main() {
     pIntArray--; // Cycle to the previous address in the array
     std::cout << "1st : " << *pIntArray << ", Address : " << pIntArray << "\n";
 
-    system("Pause");
+    
     return 0;
 }
