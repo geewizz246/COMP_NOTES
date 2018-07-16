@@ -117,7 +117,7 @@ public:
 		if (warriorB.health == 0) 
 		{
 			std::cout << "\n\n" << warriorB.name << " has died and "
-				<< warriorB.name << " is VICTORIOUS\n";
+				<< warriorA.name << " is VICTORIOUS\n";
 			return "Game Over";
 		}
 		else { return "Fight Again"; }
@@ -128,7 +128,7 @@ public:
 
 int main() {
 	// Create Warriors
-	Warrior Hulk("Hulk", 200, 40, 35);
+	Warrior Hulk("Hulk", 250, 65, 60);
 	Warrior Superman("Superman", 300, 50, 75);
 
 	// Seed random number generator
