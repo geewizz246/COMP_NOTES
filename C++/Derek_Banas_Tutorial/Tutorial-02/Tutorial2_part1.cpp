@@ -1,4 +1,5 @@
 // ************** TUTORIAL 2 **************
+// https://www.youtube.com/watch?v=tT8ICXAO_-4
 // In this tutorial we will be covering: 
 //  - conditional operators
 //  - logical operators
