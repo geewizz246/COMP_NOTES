@@ -13,7 +13,7 @@
 #include <iostream>
 #include <vector>
 #include <ctime> // Needed for random number generation
-#include <algorithm> // std::sort
+#include <algorithm> // std::sort, std::for_each
 
 /***********FUNCTION PROTOTYPES***********/
 
