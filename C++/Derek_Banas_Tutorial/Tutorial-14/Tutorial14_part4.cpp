@@ -55,7 +55,7 @@ int main() {
     auto itr3 = next(itr2, 1);
     std::cout << "Next : " << *itr3 << "\n";
 
-    // Previous mives a set number of indexes and returns an iterator
+    // Previous moves a set number of indexes and returns an iterator
     auto itr4 = prev(itr2, 1);
     std::cout << "Previous : " << *itr4 << "\n";
     // You can also insert at a defined index
