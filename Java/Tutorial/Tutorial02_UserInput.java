@@ -22,7 +22,7 @@ public class UserInput {
 		
 		System.out.print("\nEnter some decimal : ");
 		
-		// Scanner s.nextInt() ===> receive a double as input
+		// Scanner s.nextDouble() ===> receive a double as input
 		double user_input_double = scan.nextDouble();
 		System.out.print("The entered value is: ");
 		System.out.println(user_input_double);
