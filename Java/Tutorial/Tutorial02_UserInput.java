@@ -17,7 +17,7 @@ public class UserInput {
 		// Scanner s.nextInt() ===> receive an integer as input
 		int user_input_int = scan.nextInt();
 		System.out.print("The entered value is: ");
-		System.out.println(user_input_int); 
+		System.out.println(user_input_int);
 		
 		
 		System.out.print("\nEnter some decimal : ");
@@ -34,6 +34,9 @@ public class UserInput {
 		String user_input_string = scan.nextLine();
 		System.out.print("The entered string is: ");
 		System.out.println(user_input_string);
+
+		// Remember to close each Scanner object when done
+		scan.close();
 	}
 
 }
