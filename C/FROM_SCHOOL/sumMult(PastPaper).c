@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<stdlib.h>
+main()
+{
+	int mult1,mult2,sumMult;
+	mult1=6;
+	mult2=7;
+	sumMult=0;
+	
+	while(mult1<=100)
+	{
+		mult1+=6;
+	}
+	printf("\n%d\n",mult1);
+	while(mult2<=100)
+	{
+		mult2+=7;
+	}
+	printf("\n%d\n",mult2);
+	while(mult1<250)
+	{
+		sumMult=sumMult+mult1;
+		mult1+=6;
+	}
+	while(mult2<250)
+	{
+		sumMult=sumMult+mult2;
+		mult2+=7;
+	}
+	printf("\n%d\n",sumMult);
+}
