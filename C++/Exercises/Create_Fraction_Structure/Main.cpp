@@ -1,7 +1,5 @@
 // Program to create a structure to hold fractions and related operations
 #include <iostream>
-#include <sstream>
-#include <string>
 #include "Fraction.h"
 
 int main() {

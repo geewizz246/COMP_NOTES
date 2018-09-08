@@ -11,7 +11,8 @@ int LCM(int n1, int n2)
             return max;
             break;
         }
-        else {
+        else
+        {
             max++;
         }
     } while (true);
