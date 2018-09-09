@@ -1,56 +1,91 @@
 #include "Fraction.h"
 
-// Returns the lowest common multiple of two integers
-int LCM(int n1, int n2)
-{
-    int max = n1 > n2 ? n1 : n2;
-
-    do {
-        if (max % n1 == 0 && max % n2 == 0)
-        {
-            return max;
-            break;
-        }
-        else
-        {
-            max++;
-        }
-    } while (true);
-}
-
 // Returns the highest common factor of two integers
-int HCF(int n1, int n2)
+int findHCF(int n1, int n2)
 {
-    int min = n1 < n2 ? n1 : n2;
+    if (n1 == 0)
+        return n2;
 
-    do {
-        if (n1 % min == 0 && n2 % min == 0)
-        {
-            return min;
-            break;
-        }
-        else
-        {
-            min--;
-        }
-    } while (true);
+    return findHCF(n2 % n1, n1);
+}
+
+// Returns the lowest common multiple of two integers
+int findLCM(int n1, int n2)
+{
+    return (n1 * n2) / findHCF(n1, n2);
 }
 
 
+
+/* -------------------------- */
+/* ------ CONSTRUCTORS ------ */
+/* -------------------------- */
+
+Fraction::Fraction()
+{
+    numerator = 0;
+    denominator = 1; // Denominator should never be 0
+    fractionString = "0";
+}
+
+Fraction::Fraction(int numerator, int denominator)
+{
+    this->numerator = numerator;
+
+    // Ensure denominator is not 0
+    if (denominator == 0 && numerator != 0)
+    {
+        std::cout << "Zero denominator error\n";
+        exit(1);
+    }
+    this->denominator = denominator;
+    fractionString = std::to_string(numerator) + "/" + std::to_string(denominator);
+}
+
+
+
+/* -------------------------------- */
+/* ------ OPERATOR FUNCTIONS ------ */
+/* -------------------------------- */
 
 Fraction::operator const char* ()
 {
     std::ostringstream fractionStream;
-    fractionStream << numerator << "/" << denominator;
+    if (numerator == 0)
+        fractionStream << "0";
+    else if (numerator == denominator)
+        fractionStream << "1";
+    else if (numerator % denominator == 0)
+        fractionStream << (numerator / denominator);
+    else
+        fractionStream << numerator << "/" << denominator;
 
     fractionString = fractionStream.str();
 
     return fractionString.c_str();
 }
 
+/*
+std::ostream& operator << (std::ostream& out, const Fraction& f)
+{
+    out << f.numerator << "/" << f.denominator;
+    return out;
+}
+*/
+
+std::istream& operator >> (std::istream& in, Fraction& f)
+{
+    std::cout << "Numerator : ";
+    in >> f.numerator;
+    std::cout << "Denominator : ";
+    in >> f.denominator;
+
+    return in;
+}
+
 Fraction Fraction::operator + (const Fraction& f2)
 {
-    int lcm = LCM(denominator, f2.denominator); // Lowest Common Multiple
+    int lcm = findLCM(denominator, f2.denominator); // Lowest Common Multiple
 
     Fraction result = { ((numerator * (lcm / denominator)) + (f2.numerator * (lcm / f2.denominator))), lcm };
     simplify(result);
@@ -60,7 +95,7 @@ Fraction Fraction::operator + (const Fraction& f2)
 
 Fraction Fraction::operator - (const Fraction& f2)
 {
-    int lcm = LCM(denominator, f2.denominator);
+    int lcm = findLCM(denominator, f2.denominator); // Lowest Common Multiple
 
     Fraction result = { ((numerator * (lcm / denominator)) - (f2.numerator * (lcm / f2.denominator))), lcm };
     simplify(result);
@@ -84,17 +119,17 @@ Fraction Fraction::operator / (const Fraction& f2)
     return result;
 }
 
-bool Fraction::operator == (const Fraction& f2)
+const bool Fraction::operator == (const Fraction& f2)
 {
-    int lcm = LCM(denominator, f2.denominator); // Lowest Common Multiple
+    int lcm = findLCM(denominator, f2.denominator); // Lowest Common Multiple
 
     // Perform comparison between numerators
     return ((numerator * (lcm / denominator)) == (f2.numerator * (lcm / f2.denominator)));
 }
 
-bool Fraction::operator > (const Fraction& f2)
+const bool Fraction::operator > (const Fraction& f2)
 {
-    int lcm = LCM(denominator, f2.denominator); // Lowest Common Multiple
+    int lcm = findLCM(denominator, f2.denominator); // Lowest Common Multiple
     int thisSize = numerator * (lcm / denominator); // Size of fraction 1
     int f2Size = f2.numerator * (lcm / f2.denominator); // Size of fraction 2
     
@@ -105,9 +140,9 @@ bool Fraction::operator > (const Fraction& f2)
         return false;
 }
 
-bool Fraction::operator < (const Fraction& f2)
+const bool Fraction::operator < (const Fraction& f2)
 {
-    int lcm = LCM(denominator, f2.denominator); // Lowest Common Multiple
+    int lcm = findLCM(denominator, f2.denominator); // Lowest Common Multiple
     int thisSize = numerator * (lcm / denominator); // Size of fraction 1
     int f2Size = f2.numerator * (lcm / f2.denominator); // Size of fraction 2
 
@@ -126,17 +161,33 @@ void Fraction::operator = (const Fraction& fractionToCopy)
 
 
 
+/* ------------------------------- */
+/* ------ GENERAL FUNCTIONS ------ */
+/* ------------------------------- */
+
 void Fraction::simplify(Fraction& fract)
 {
-    int hcf = HCF(fract.numerator, fract.denominator);
+    // If numerator is 0, assume that fraction cannot be simplified
+    if (fract.numerator == 0)
+        return;
+
+    // abs() ====> returns the absolute value (or magnitude) of a number 
+    // e.g. abs(-4) results in 4
+
+    int hcf = findHCF(abs(fract.numerator), abs(fract.denominator));
     fract.numerator /= hcf;
     fract.denominator /= hcf;
+}
+
+double Fraction::toDouble() const
+{
+    return (double(numerator) / double(denominator));
 }
 
 /*
 void Fraction::commonDenom(Fraction& f1, Fraction& f2)
 {
-    int lcm = LCM(f1.denominator, f2.denominator); // Lowest Common Multiple
+    int lcm = findLCM(f1.denominator, f2.denominator); // Lowest Common Multiple
     f1.numerator *= (lcm / f1.denominator);
     f2.numerator *= (lcm / f2.denominator);
     f1.denominator = lcm, f2.denominator = lcm;

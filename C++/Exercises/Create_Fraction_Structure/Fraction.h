@@ -13,36 +13,53 @@ struct Fraction {
     int denominator;
     std::string fractionString; // Holds string representation of fraction
 
+    /* -------------------------- */
+    /* ------ CONSTRUCTORS ------ */
+    /* -------------------------- */
+        
+    // Default Constructor
+    Fraction();
+
+    // Overloaded Constructor
+    Fraction(int numerator, int denominator);
+
+
+
     /* -------------------------------- */
     /* ------ OPERATOR FUNCTIONS ------ */
     /* -------------------------------- */
 
-        // Creates a C string representation which is a pointer to an array that is null terminated
-        operator const char* ();
+    // Creates a C string representation which is a pointer to an array that is null terminated
+    operator const char* ();
 
-        // Overload + operator to add two fractions
-        Fraction operator + (const Fraction& f2);
+    // Alternatively, overload the << operator
+    // friend std::ostream& operator << (std::ostream& out, const Fraction& f);
 
-        // Overload - operator to subtract two fractions
-        Fraction operator - (const Fraction& f2);
+    friend std::istream& operator >> (std::istream& in, Fraction& f);
 
-        // Overload * operator to multiply two fractions 
-        Fraction operator * (const Fraction& f2);
+    // Overload + operator to add two fractions
+    Fraction operator + (const Fraction& f2);
 
-        // Overload / operator to divide two fractions
-        Fraction operator / (const Fraction& f2);
+    // Overload - operator to subtract two fractions
+    Fraction operator - (const Fraction& f2);
 
-        // Overload == operator to check for fraction equality
-        bool operator == (const Fraction& f2);
+    // Overload * operator to multiply two fractions 
+    Fraction operator * (const Fraction& f2);
 
-        // Overload > operator to check if one fraction is greater than the other
-        bool operator > (const Fraction& f2);
+    // Overload / operator to divide two fractions
+    Fraction operator / (const Fraction& f2);
 
-        // Overload < operator to check if one fraction is less than the other
-        bool operator < (const Fraction& f2);
+    // Overload == operator to check for fraction equality
+    const bool operator == (const Fraction& f2);
 
-        // Overload = operator to do assignment
-        void operator = (const Fraction& fractionToCopy);
+    // Overload > operator to check if one fraction is greater than the other
+    const bool operator > (const Fraction& f2);
+
+    // Overload < operator to check if one fraction is less than the other
+    const bool operator < (const Fraction& f2);
+
+    // Overload = operator to do assignment
+    void operator = (const Fraction& fractionToCopy);
 
 
 
@@ -50,18 +67,14 @@ struct Fraction {
     /* ------ GENERAL FUNCTIONS ------ */
     /* ------------------------------- */
 
-        // Return the numerator
-        int getNumerator() const { return numerator; }
+    // Simplify given fraction
+    void simplify(Fraction& fract);
 
-        // Return the denominator
-        int getDenominator() const { return denominator; }
+    // Convert to double equivalent
+    double toDouble() const;
 
-        // Simplify given fraction
-        void simplify(Fraction&);
-
-        // Make two fractions have the same denominator
-        // void commonDenom(Fraction& f1, Fraction& f2);
+    // Make two fractions have the same denominator
+    // void commonDenom(Fraction& f1, Fraction& f2);
 };
-
 
 #endif
